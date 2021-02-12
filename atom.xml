@@ -1,68 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Here&#39;s adorable</title>
+  <title>Hexo</title>
   
   
-  <link href="https://sevenyoungairye.github.io/atom.xml" rel="self"/>
+  <link href="http://example.com/atom.xml" rel="self"/>
   
-  <link href="https://sevenyoungairye.github.io/"/>
-  <updated>2021-02-11T08:51:45.783Z</updated>
-  <id>https://sevenyoungairye.github.io/</id>
+  <link href="http://example.com/"/>
+  <updated>2021-02-12T10:40:59.451Z</updated>
+  <id>http://example.com/</id>
   
   <author>
-    <name>bitQian</name>
+    <name>John Doe</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>picture list</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/picture/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/picture/</id>
+    <published>2021-02-12T10:35:53.020Z</published>
+    <updated>2021-02-12T10:40:59.451Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="image-list-to-be-continued…"><a href="#image-list-to-be-continued…" class="headerlink" title="image list to be continued…"></a>image list to be continued…</h2><div>    <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/bg/33.jpg"></div><div>     <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/bg/44.jpg"></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;image-list-to-be-continued…&quot;&gt;&lt;a href=&quot;#image-list-to-be-continued…&quot; class=&quot;headerlink&quot; title=&quot;image list to be continued…&quot;&gt;&lt;/a&gt;image</summary>
+      
+    
+    
+    
+    
+    <category term="图集" scheme="http://example.com/tags/%E5%9B%BE%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>book list</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/book/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/book/</id>
+    <published>2021-02-12T08:52:19.599Z</published>
+    <updated>2021-02-12T10:26:35.514Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="2021-02-12"><a href="#2021-02-12" class="headerlink" title="2021/02/12"></a>2021/02/12</h2><pre class="line-numbers language-yaml"><code class="language-yaml">《小王子》《送你一匹野马》<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+    
+    
+    <summary type="html">hhh</summary>
+    
+    
+    
+    
+    <category term="悦读" scheme="http://example.com/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/04/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/04/</id>
+    <published>2021-02-12T08:47:36.181Z</published>
+    <updated>2021-02-12T08:48:54.542Z</updated>
+    
+    
+    <summary type="html">hhh</summary>
+    
+    
+    
+    <category term="转载" scheme="http://example.com/categories/%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>3</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/03/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/03/</id>
+    <published>2021-02-12T08:47:07.926Z</published>
+    <updated>2021-02-12T08:48:59.652Z</updated>
+    
+    
+    <summary type="html">hhh</summary>
+    
+    
+    
+    <category term="随想" scheme="http://example.com/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/02/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/02/</id>
+    <published>2021-02-12T08:45:48.174Z</published>
+    <updated>2021-02-12T08:47:01.184Z</updated>
+    
+    
+    <summary type="html">hhh</summary>
+    
+    
+    
+    <category term="资源" scheme="http://example.com/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1</title>
+    <link href="http://example.com/2021/02/12/2021/02/12/01/"/>
+    <id>http://example.com/2021/02/12/2021/02/12/01/</id>
+    <published>2021-02-12T08:45:39.823Z</published>
+    <updated>2021-02-12T08:49:08.715Z</updated>
+    
+    
+    <summary type="html">hhh</summary>
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>木寸上</title>
-    <link href="https://sevenyoungairye.github.io/post/8a97.html"/>
-    <id>https://sevenyoungairye.github.io/post/8a97.html</id>
+    <link href="http://example.com/2020/12/18/article-simple/"/>
+    <id>http://example.com/2020/12/18/article-simple/</id>
     <published>2020-12-18T07:25:20.487Z</published>
     <updated>2021-02-11T08:51:45.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>　“最最喜欢你，绿子。”</p><p>　“什么程度？”</p><p>　<font color="pink">“像喜欢春天的熊一样。”</font></p>]]></content>
     
     
     <summary type="html">木寸上</summary>
     
     
     
-    <category term="悦读" scheme="https://sevenyoungairye.github.io/categories/%E6%82%A6%E8%AF%BB/"/>
+    <category term="悦读" scheme="http://example.com/categories/%E6%82%A6%E8%AF%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>hexo &amp; github 搭建博客</title>
-    <link href="https://sevenyoungairye.github.io/post/983a.html"/>
-    <id>https://sevenyoungairye.github.io/post/983a.html</id>
+    <link href="http://example.com/2020/12/17/first-blog/"/>
+    <id>http://example.com/2020/12/17/first-blog/</id>
     <published>2020-12-17T14:17:43.746Z</published>
     <updated>2021-02-11T08:51:45.777Z</updated>
+    
+    <content type="html"><![CDATA[<h4>adorable here~</h4>]]></content>
     
     
     <summary type="html">使用hexo &amp; git &amp; node &amp; github build ..</summary>
     
     
     
-    <category term="技术" scheme="https://sevenyoungairye.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://sevenyoungairye.github.io/post/3eeb.html"/>
-    <id>https://sevenyoungairye.github.io/post/3eeb.html</id>
+    <link href="http://example.com/2020/12/17/hello-world/"/>
+    <id>http://example.com/2020/12/17/hello-world/</id>
     <published>2020-12-17T13:42:39.912Z</published>
     <updated>2021-02-11T08:51:45.790Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
     <summary type="html">how to use hexo</summary>
     
     
     
-    <category term="技术" scheme="https://sevenyoungairye.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
