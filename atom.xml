@@ -18,8 +18,8 @@
   
   <entry>
     <title>picture list</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/picture/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/picture/</id>
+    <link href="http://example.com/post/5.html"/>
+    <id>http://example.com/post/5.html</id>
     <published>2021-02-12T10:35:53.020Z</published>
     <updated>2021-02-12T10:40:59.451Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>book list</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/book/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/book/</id>
+    <link href="http://example.com/post/4.html"/>
+    <id>http://example.com/post/4.html</id>
     <published>2021-02-12T08:52:19.599Z</published>
     <updated>2021-02-12T10:26:35.514Z</updated>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>4</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/04/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/04/</id>
+    <link href="http://example.com/post/3.html"/>
+    <id>http://example.com/post/3.html</id>
     <published>2021-02-12T08:47:36.181Z</published>
     <updated>2021-02-12T08:48:54.542Z</updated>
     
@@ -76,8 +76,8 @@
   
   <entry>
     <title>3</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/03/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/03/</id>
+    <link href="http://example.com/post/2.html"/>
+    <id>http://example.com/post/2.html</id>
     <published>2021-02-12T08:47:07.926Z</published>
     <updated>2021-02-12T08:48:59.652Z</updated>
     
@@ -93,8 +93,8 @@
   
   <entry>
     <title>2</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/02/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/02/</id>
+    <link href="http://example.com/post/1.html"/>
+    <id>http://example.com/post/1.html</id>
     <published>2021-02-12T08:45:48.174Z</published>
     <updated>2021-02-12T08:47:01.184Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>1</title>
-    <link href="http://example.com/2021/02/12/2021/02/12/01/"/>
-    <id>http://example.com/2021/02/12/2021/02/12/01/</id>
+    <link href="http://example.com/post/54465.html"/>
+    <id>http://example.com/post/54465.html</id>
     <published>2021-02-12T08:45:39.823Z</published>
     <updated>2021-02-12T08:49:08.715Z</updated>
     
@@ -127,8 +127,8 @@
   
   <entry>
     <title>木寸上</title>
-    <link href="http://example.com/2020/12/18/article-simple/"/>
-    <id>http://example.com/2020/12/18/article-simple/</id>
+    <link href="http://example.com/post/8a97.html"/>
+    <id>http://example.com/post/8a97.html</id>
     <published>2020-12-18T07:25:20.487Z</published>
     <updated>2021-02-11T08:51:45.783Z</updated>
     
@@ -146,8 +146,8 @@
   
   <entry>
     <title>hexo &amp; github 搭建博客</title>
-    <link href="http://example.com/2020/12/17/first-blog/"/>
-    <id>http://example.com/2020/12/17/first-blog/</id>
+    <link href="http://example.com/post/983a.html"/>
+    <id>http://example.com/post/983a.html</id>
     <published>2020-12-17T14:17:43.746Z</published>
     <updated>2021-02-11T08:51:45.777Z</updated>
     
@@ -165,8 +165,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2020/12/17/hello-world/"/>
-    <id>http://example.com/2020/12/17/hello-world/</id>
+    <link href="http://example.com/post/3eeb.html"/>
+    <id>http://example.com/post/3eeb.html</id>
     <published>2020-12-17T13:42:39.912Z</published>
     <updated>2021-02-11T08:51:45.790Z</updated>
     
