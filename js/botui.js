@@ -106,7 +106,7 @@ function bot_ui_ini() {
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "bitQian以及站名都来自一部动画，因为和主角有一样的爱好~ 如果有兴趣可以找找首页上的视频~"
+                content: "bitQian来自一部动画。是主人公的名字, 翻译过来滴."
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
@@ -143,7 +143,7 @@ function bot_ui_ini() {
         fifthpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "emmmm, bitqian, 小千, 来源宫崎骏先生的电影."
+                content: "emmmm, 是GitHub的子域名, 以账号名作为二级域名."
             }).then(function () {
                 botui.message.add({
                     delay: 1600,
