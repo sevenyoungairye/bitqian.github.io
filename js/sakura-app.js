@@ -699,6 +699,8 @@ var pjaxInit = function () {
   timeSeriesReload()
   add_copyright()
   console.log($('#myscript').text())
+  // router changed..
+  musicPlay();
 }
 $(document).on('click', '.sm', function () {
   var msg = '您真的要设为私密吗？'
@@ -1631,6 +1633,8 @@ if ((isWebkit || isOpera || isIe) && document.getElementById && window.addEventL
       element.focus()
     }
   }, false)
+  // when window location href in music page, create music list.
+  ap_play();
 }
 // loadCSS(mashiro_option.jsdelivr_css_src);
 // loadCSS("https://at.alicdn.com/t/font_679578_dishi1yoavm.css");
@@ -1768,3 +1772,48 @@ $(document).ready(function () {
 // if (document.body.clientWidth > 860) {
 //     aplayerF();
 // }
+
+ap = "";
+function ap_play() 
+{
+    // in music page, create a music list..
+    if (!document.getElementById('aplayer')) {
+      return;
+    }
+    ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        audio: [{
+            name: 'Mine Mine',
+            artist: '周杰伦',
+            url: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20Mine%20Mine.mp3',
+            cover: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/mime.png'
+        }, {
+            name: '断了的弦',
+            artist: '周杰伦',
+            url: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E6%96%AD%E4%BA%86%E7%9A%84%E5%BC%A6.mp3',
+            cover: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/dldx.png'
+        }, {
+            name: '稻香',
+            artist: '周杰伦',
+            url: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/%E5%91%A8%E6%9D%B0%E4%BC%A6%20-%20%E7%A8%BB%E9%A6%99.flac',
+            cover: 'https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/music/2021/02/13/dx.png'
+        }]
+    });
+} 
+
+function musicPlay() {
+  
+  if (document.getElementById('aplayer')) {
+    // in music page
+    // set this music aplayer
+    if (!ap)  
+      ap_play();
+  } else {
+    // not music page, shutdown music..
+    if (ap) {
+      ap.pause()
+      ap = "";
+    }
+  }
+
+}
