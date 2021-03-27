@@ -90,7 +90,7 @@
             
               
                 <li>
-                  <a href="http://github.com/sevenyoungairye" target="_blank" class="social-github" title="github">
+                  <a href="https://github.com/sevenyoungairye" target="_blank" class="social-github" title="github">
                     <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/social/github.png">
                   </a>
                 </li>
@@ -98,15 +98,15 @@
             
               
                 <li>
-                  <a href="http://weibo.com/" target="_blank" class="social-github" title="sina">
-                    <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/social/sina.png">
+                  <a href="https://t.me/bitQian/" target="_blank" class="social-github" title="telegram">
+                    <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/social/telegram.svg">
                   </a>
                 </li>
               
             
               
                 <li>
-                  <a href="http://music.163.com" target="_blank" class="social-github" title="wangyiyun">
+                  <a href="https://music.163.com" target="_blank" class="social-github" title="wangyiyun">
                     <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/social/wangyiyun.png">
                   </a>
                 </li>
@@ -114,7 +114,7 @@
             
               
                 <li>
-                  <a href="http://zhihu.com" target="_blank" class="social-github" title="zhihu">
+                  <a href="https://zhihu.com" target="_blank" class="social-github" title="zhihu">
                     <img src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/social/zhihu.png">
                   </a>
                 </li>
@@ -434,7 +434,7 @@
 <h4 id="Nginx实现动静分离"><a href="#Nginx实现动静分离" class="headerlink" title="Nginx实现动静分离"></a>Nginx实现动静分离</h4><p>架构分析</p>
 <p><img src="https://img-blog.csdnimg.cn/20200517133353684.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY4NTg2OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h4 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h4><p>修改nginx.conf配置，其中第一个location负责处理后台请求，第二个负责处理静态资源，如下所示。</p>
-<pre class="line-numbers language-yaml"><code class="language-yaml">worker_processes  1;
+<pre class=" language-yaml"><code class="language-yaml">worker_processes  1;
 
 events <span class="token punctuation">{</span>
     worker_connections  1024;
@@ -458,7 +458,7 @@ http <span class="token punctuation">{</span>
        <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h4 id="动静分离与前后分离区别"><a href="#动静分离与前后分离区别" class="headerlink" title="动静分离与前后分离区别:"></a>动静分离与前后分离区别:</h4><p>动静分离动态资源与静态资源分离，不会部署在同一台服务器上。<br>前后分离:网站架构模式，微服务开发基于SOA面向于服务器开发，后台和前端都采用调用接口方式。将一个项目拆分成一个控制Web(前端)和接口(后端),最终使用rpc远程调用技术。视图层和业务逻辑层拆分，中间采用RPC远程调用技术</p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/haoworld/p/nginx-shi-xian-dong-jing-fen-li.html">参考</a></p>
 
@@ -775,9 +775,9 @@ http <span class="token punctuation">{</span>
       
         <a href="http://github.com/sevenyoungairye" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
       
-        <a href="http://weibo.com" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+        <a href="https://t.me/bitQian/" class="fa fa-telegram" target="_blank" style="color: #0088cc; margin-left:20px"></a>
       
-        <a href="https://wpa.qq.com/msgrd?v=3&uin=849033901&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=849033901" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
       
     
   </p>
