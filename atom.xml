@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-03T02:07:27.522Z</updated>
+  <updated>2021-04-09T13:42:33.076Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>send a luck</title>
+    <link href="http://example.com/post/29592.html"/>
+    <id>http://example.com/post/29592.html</id>
+    <published>2021-04-09T13:19:37.000Z</published>
+    <updated>2021-04-09T13:42:33.076Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>愿君能似月亭亭，千里伴君行。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;愿君能似月亭亭，千里伴君行。&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Java8函数式接口</title>
