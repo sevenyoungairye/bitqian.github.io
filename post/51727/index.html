@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">book list | Here&#39;s adorable~</title>
+  <title itemprop="name">Java8函数式接口 | Here&#39;s adorable~</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -385,11 +385,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/06.jpg);" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/06.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/22/1.png);" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/22/1.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      book list</h1>
+      Java8函数式接口</h1>
       <p class="entry-census">
         <span>
           <a href="">
@@ -401,7 +401,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-2-12<span class="bull">
+        2021-2-22<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -415,9 +415,108 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="2021-02-12"><a href="#2021-02-12" class="headerlink" title="2021/02/12"></a>2021/02/12</h2><pre><code class="markdown">《小王子》
-《送你一匹野马》
+          <h2>Java8函数式接口</h2>
+
+<p>
+ 函数式接口有利于lambda表达式的编写和流式计算。在Java中定义了四种函数式接口，<code> Consumer </code> 消费型接口 有参无返,<code> Supplier </code> 供给型函数 无参有返，<code> Function </code> 函数式接口 有参有返，<code> Predicate </code> 断定型接口。 四大接口。接口参数和返回值只有一个。
+</p>
+
+<p>下面T为类型的泛型，R为返回的泛型</p>
+<h2 id="1-Consumer-lt-T-gt-消费型接口"><a href="#1-Consumer-lt-T-gt-消费型接口" class="headerlink" title="1. Consumer<T> 消费型接口"></a>1. Consumer&lt;T&gt; 消费型接口</h2><ol>
+<li>匿名内部类实现</li>
+</ol>
+<pre><code class="java">// 消费型函数
+Consumer&lt;String&gt; consumer = new Consumer&lt;String&gt;() {
+    @Override
+    public void accept(String s) {
+        System.out.println("come in consumer type function..." + s);
+    }
+};
 </code></pre>
+<ol>
+<li>lambda演示</li>
+</ol>
+<pre><code class="java">private static void consumerDemo() {
+
+    Consumer&lt;String&gt; consumer = str -&gt; {
+        System.out.println("消费型函数 有参无返");
+        System.out.println(str);
+    };
+
+    // 调用consumber接口中的函数
+    consumer.accept("bitQian666");
+}
+</code></pre>
+<h2 id="2-Supplier-lt-R-gt-供给型接口"><a href="#2-Supplier-lt-R-gt-供给型接口" class="headerlink" title="2. Supplier <R> 供给型接口"></a>2. Supplier &lt;R&gt; 供给型接口</h2><ol>
+<li>匿名内部类实现</li>
+</ol>
+<pre><code class="java">// 供给型函数
+Supplier&lt;String&gt; supplier = new Supplier&lt;String&gt;() {
+    @Override
+    public String get() {
+        return null;
+    }
+};
+</code></pre>
+<ol start="2">
+<li>lambda演示</li>
+</ol>
+<pre><code class="java">private static void supplierDemo() {
+    // 供给型函数
+    Supplier&lt;String&gt; supplier = () -&gt; "supplier 供给型函数 无参有返";
+    System.out.println(supplier.get());
+}
+</code></pre>
+<h2 id="3-Function-lt-T-R-gt-函数型接口"><a href="#3-Function-lt-T-R-gt-函数型接口" class="headerlink" title="3. Function<T, R> 函数型接口"></a>3. Function&lt;T, R&gt; 函数型接口</h2><ol>
+<li>匿名内部类实现</li>
+</ol>
+<pre><code class="java">// 函数型接口
+Function&lt;String, Integer&gt; function = new Function&lt;String, Integer&gt;() {
+    @Override
+    public Integer apply(String s) {
+        return null;
+    }
+};
+</code></pre>
+<ol>
+<li>lambda演示</li>
+</ol>
+<pre><code class="java">private static void functionDemo() {
+    // 函数型接口
+    Function&lt;String, Integer&gt; function = s -&gt; {
+
+        System.out.println("这是有参有返回的函数式接口!\t" + s);
+
+        return 666;
+    };
+
+    System.out.println(function.apply("hello function!"));
+}
+</code></pre>
+<h2 id="4-Predicate-lt-T-gt-断定型接口"><a href="#4-Predicate-lt-T-gt-断定型接口" class="headerlink" title="4.  Predicate<T> 断定型接口"></a>4.  Predicate&lt;T&gt; 断定型接口</h2><ol>
+<li>匿名内部类实现</li>
+</ol>
+<pre><code class="java">// 断定型接口
+Predicate&lt;String&gt; predicate = new Predicate&lt;String&gt;() {
+    // 参数是泛型 返回是boolean
+    // 调用test方法
+    @Override
+    public boolean test(String s) {
+        return false;
+    }
+};
+</code></pre>
+<ol>
+<li>lambda演示</li>
+</ol>
+<pre><code class="java">private static void predicateDemo() {
+    // 方法引用 判断输入的字符串 是否为空
+    Predicate&lt;String&gt; predicate = String::isEmpty;
+
+    System.out.println(predicate.test("hhh"));
+}
+</code></pre>
+<h2 id="5-四大接口总结"><a href="#5-四大接口总结" class="headerlink" title="5. 四大接口总结"></a>5. 四大接口总结</h2><p><img src="https://img-blog.csdnimg.cn/20210222125703693.png"></p>
 
         </div>
         <!-- .entry-content -->
@@ -449,15 +548,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/post/5.html" rel="prev">
+            <a href="/post/29592/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/05.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/05.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/images/blog/2021/4/c_s_1000469000.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://bitqian-website.oss-cn-hangzhou.aliyuncs.com/sevenyoungairye-github-blog/images/blog/2021/4/c_s_1000469000.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                picture list</h3>
+                send a luck</h3>
                 <hr>
               </div>
             </a>
@@ -467,15 +566,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/post/3.html" rel="next">
+            <a href="/post/5/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/04.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/04.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/05.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/sevenyoungairye/cdn/images/blog/2021/02/14/05.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                nginx 动静分离</h3>
+                picture list</h3>
                 <hr>
               </div>
             </a>
@@ -521,7 +620,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -533,10 +632,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
