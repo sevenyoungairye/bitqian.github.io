@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-08T13:19:38.323Z</updated>
+  <updated>2021-05-08T13:26:23.886Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>docker部署node项目</title>
-    <link href="http://example.com/post/undefined.html"/>
-    <id>http://example.com/post/undefined.html</id>
+    <link href="http://example.com/post/9666.html"/>
+    <id>http://example.com/post/9666.html</id>
     <published>2021-05-08T12:04:36.000Z</published>
-    <updated>2021-05-08T13:19:38.323Z</updated>
+    <updated>2021-05-08T13:26:23.886Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-由来"><a href="#1-由来" class="headerlink" title="1. 由来"></a>1. 由来</h2><p>本人有一台aliyun服务器, 配置1core  2G。<del>心血来潮</del>(闲得发慌)解析了域名 <a href="https://blog.bitqian.cn"><del>blog.bitqian.cn</del> </a>。用了阿里云的<a href="https://www.aliyun.com/product/security/markets/aliyun/product/cas">免费ssl证书</a>，加nginx服务器配置ssl证书和端口转发。</p><p>然后环境是：centos7 + Git + Docker + Node镜像 + <a href="https://github.com/honjun/hexo-theme-sakura">hexo sakura主题博客</a>。对于博客主题，只要node适配就行了，把博客往node容器里面放。</p><p>这里不讲详细的搭建操作，只讲步骤和踩到的坑。</p><h2 id="2-步骤说明"><a href="#2-步骤说明" class="headerlink" title="2. 步骤说明"></a>2. 步骤说明</h2><pre><code class="markdown">1. 准备一个NodeJs支持的博客，上传到Linux服务器。我用了Git托管博客源码，方便在服务器上pull源码。2. 由于是Git托管, 为了拉取源码, 需要在centos配置Git SSH密钥。3. 安装Docker, 拉取到Node镜像。4. 启动NodeJs容器, 同时挂载博客的目录到容器的目录，还要映射端口，我的这个项目是运行在4000端口的，容器要暴露4000端口。5. 进入容器, 由于挂载了博客, 可以在容器中设置npm淘宝镜像，然后安装依赖，&lt;code&gt;nohup hexo s &amp;&lt;/code&gt; 启动项目。退出容器，项目就可以访问了。6. 到了第五步，博客需要带端口访问。使用nginx请求转发，监听443端口，博客就搭建完成了。</code></pre><h2 id="3-tips"><a href="#3-tips" class="headerlink" title="3. tips"></a>3. tips</h2><p>学到了一招。SSL端口加密。本来只能监听443 (<a href="https://example.com/">https://example.com/</a>) 的，我现在想要80也是加锁的状态 (<a href="http://example.com/">http://example.com</a>) 。之前只知道nginx来重写，现在可以用html文件跳转了，原理就是当用户访问80端口时，nginx转发到html文件，html跳转到https。百度就是类似这么干的。<code>curl baidu.com</code></p><p>html文件如下：</p><pre><code class="html">&lt;!-- director by meta...  --&gt;&lt;html&gt;&lt;meta http-equiv="refresh" content="0;url=https://blog.bitqian.cn/"&gt;&lt;/html&gt;</code></pre><p>nginx跳转如下:</p><pre><code class="shell">server {         listen 80;         server_name blog.bitqian.cn;         location / {                # index.html 在下面的目录下                root /home/your-website/;                index index.htm index.html;         }}</code></pre><p> 这么折腾下来，好处就是容器省资源；博客更新，<code>git pull</code> 就行，不需要<code>hexo s, hexo g, hexo d</code> 这么三连了。</p>]]></content>
     
