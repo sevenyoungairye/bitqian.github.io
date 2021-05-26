@@ -166,6 +166,7 @@
 </div>
 
 <script src="/js/vue.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css">
     <div id="page" class="site wrapper">
       <header class="site-header no-select gizle sabit" role="banner">
   <div class="site-top">
@@ -419,13 +420,12 @@
         
         <div class="entry-content">
           <div id="app">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css">
 
-    <el-button type="text" v-if="hrefVisible" @click="open">I'm coming back..</el-button>
+<el-button type="text" v-if="hrefVisible" @click="open">I'm coming back..</el-button>
 
-    {{ this.sharing }}
+{{ this.sharing }}
 
-    <label v-if="hrefVisible">很小声, 用了vue, 貌似和主题不兼容.. 请刷新页面。</label>
+<label v-if="hrefVisible">很小声, 用了vue, 貌似和主题不兼容.. 请刷新页面。</label>
 
 </div>
 
@@ -602,7 +602,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -614,10 +614,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
