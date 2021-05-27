@@ -426,8 +426,6 @@
 
 </div>
 
-<script src="/js/md5.js"> </script>
-
 <script>
 
     function cssOnload(url){
@@ -461,6 +459,7 @@
         document.getElementsByTagName("head")[0].appendChild(script);
     };
 
+    loadJs('/js/md5.js', null)
     loadJs('/js/vue.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js', null);
@@ -556,7 +555,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -568,10 +567,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
