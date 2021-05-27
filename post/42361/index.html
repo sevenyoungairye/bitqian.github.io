@@ -426,14 +426,46 @@
 
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css">
-
 <script src="/js/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js"></script>
 <script src="/js/md5.js"> </script>
 
-<script src="/js/webpack/vue-encrypt.js"></script>
+<script>
+
+    function cssOnload(url){
+        var head=document.getElementsByTagName("head");
+        var es=document.createElement("link");
+        es.href=url;
+        es.rel="stylesheet";
+        es.type="text/css";
+        head[0].appendChild(es);
+    } 
+    cssOnload('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css');
+
+    function loadJs(url, callback) {
+        var done = false;
+        var script = document.createElement('script');
+        script.type = 'text/javascript';//do not 'application/javascript',because Low version of the browser is not compatible
+        script.language = 'javascript';
+        script.charset = "utf-8";
+        script.src = url;
+        //script.setAttribute('src', url);
+        script.onload = script.onreadystatechange = function () {
+            if (!done && (!script.readyState || script.readyState == 'loaded' || script.readyState == 'complete')) {
+                done = true;
+                script.onload = script.onreadystatechange = null;
+                if (callback) {
+                    console.log('load ' + url + ' success.');
+                    callback.call(script);
+                }
+            }
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    };
+
+    loadJs('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js', null);
+    loadJs('https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js', null);
+    loadJs('/js/webpack/vue-encrypt.js', null);
+</script>
 
 
 
@@ -524,7 +556,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -536,10 +568,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -589,7 +621,7 @@
           <!-- 全网站字数统计wordcount -->
           <i class="fa fa-line-chart" aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span
             class="post-count" style="color:#ff9999;">
-            1.9k
+            2.1k
           </span>字
         </span>
         <!-- 不蒜子网页计数器 -->

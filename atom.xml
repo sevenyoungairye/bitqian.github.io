@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-27T13:02:37.014Z</updated>
+  <updated>2021-05-27T14:09:22.213Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/post/42361/"/>
     <id>http://example.com/post/42361/</id>
     <published>2021-05-25T09:50:02.000Z</published>
-    <updated>2021-05-27T13:02:37.014Z</updated>
+    <updated>2021-05-27T14:09:22.213Z</updated>
     
-    <content type="html"><![CDATA[<div id="app"><el-button type="text" v-if="hrefVisible" @click="open">I'm coming back..</el-button>{{ sharing }}<label v-if="hrefVisible">很小声, 用了vue, 貌似和主题不兼容.. 请刷新页面。</label></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css"><script src="/js/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js"></script><script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js"></script><script src="/js/md5.js"> </script><script src="/js/webpack/vue-encrypt.js"></script><!-- https://www.jianshu.com/p/4c236d83ea04 -->]]></content>
+    <content type="html"><![CDATA[<div id="app"><el-button type="text" v-if="hrefVisible" @click="open">I'm coming back..</el-button>{{ sharing }}<label v-if="hrefVisible">很小声, 用了vue, 貌似和主题不兼容.. 请刷新页面。</label></div><script src="/js/vue.js"></script><script src="/js/md5.js"> </script><script>    function cssOnload(url){        var head=document.getElementsByTagName("head");        var es=document.createElement("link");        es.href=url;        es.rel="stylesheet";        es.type="text/css";        head[0].appendChild(es);    }     cssOnload('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css');    function loadJs(url, callback) {        var done = false;        var script = document.createElement('script');        script.type = 'text/javascript';//do not 'application/javascript',because Low version of the browser is not compatible        script.language = 'javascript';        script.charset = "utf-8";        script.src = url;        //script.setAttribute('src', url);        script.onload = script.onreadystatechange = function () {            if (!done && (!script.readyState || script.readyState == 'loaded' || script.readyState == 'complete')) {                done = true;                script.onload = script.onreadystatechange = null;                if (callback) {                    console.log('load ' + url + ' success.');                    callback.call(script);                }            }        };        document.getElementsByTagName("head")[0].appendChild(script);    };    loadJs('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js', null);    loadJs('https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js', null);    loadJs('/js/webpack/vue-encrypt.js', null);</script><!-- https://www.jianshu.com/p/4c236d83ea04 -->]]></content>
     
     
       
