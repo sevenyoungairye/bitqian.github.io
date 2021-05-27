@@ -420,14 +420,15 @@
 
 <el-button type="text" v-if="hrefVisible" @click="open">I'm coming back..</el-button>
 
-{{ this.sharing }}
+{{ sharing }}
 
 <label v-if="hrefVisible">很小声, 用了vue, 貌似和主题不兼容.. 请刷新页面。</label>
 
 </div>
 
-<script src="/js/vue.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/theme-chalk/index.css">
+
+<script src="/js/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js"></script>
 <script src="/js/md5.js"> </script>
@@ -438,7 +439,7 @@
 
         var words = `Yx4uAUHooa7uOIDP6ID1FLpK2X3sLYXBK7YFXP+g3r/X5wvf9g1U4TqctIdj2PhqTXdqhpr0rA+uG2kUkXZ754yucwsEFWSGwKD2SUXqsfuhL3zBZe3jCayRwcD/nWNRwpKBGfNtQf+T/2zilDPUDkmFvHXiU5rxg61XN6IadgtmpOmtCQg+QApCQbD4tLMR6dGMsP1UxnDnSi0NUOGCO4DIc1lw73dJw9tOIVDXt37kgWC4+D8iUBNJkrC9Y7QbWs/KnI35nChthma1JP3VP1tgZLbJKKdv4Pz61GseZWWDjx2xF76pXcPeZuEJ1EoP+3xQi3Z0THaejlaQX4y7x9vX5lv+EH1Jkav6hGgfw4b7lcKrYPhBrplphc17Dvv0vQrv6dVBsdOZRdD8HOPBEq0w/XGjkJYU3f9pGNpdlBG/Xb3tVYRLInC0j7TO38HDppFjZ6PjqfvGwl24c1+U2PAUQwYIOrOPRt/FW09FjqB95nYket4EfcBsg5z7vdakfpq7eJ7zGNKFvv+HD6aF5kILtgFNvwRStd0Wt440nA1dWQJ80vQwbSWHxIZtSdccnlI4nqjmCT0Sd8t0NDtPEqgp0c4ka0wjxtsdmUVdJcn2PTlnRK5I/FLheEXsUIt6rmMj/BNWslUZbrLQOsIZYuhUtpiE3N0l0IiXigK9hHGo6XLbmOR42YqzW6mQJMXNESlsr4hxBlOJ3sc6RwfLy228FJc3OVtzgFdTthwED38c+2zDQKR7fhp1McSijns5HY08PyKizKvfJuZZFBgomKBBXBYMt+9X8KtD1gDQcQ8LfW5FqemLiRMQp+ilJRsmexggveKJpjw8bA3hwopQh/mb9244xG85hT1SB/gv0DvkP8J8zBmN7NshwT1Y/90eKNQ7UJkNNlZffoMTFBrxjrfx4Ccc3R7bU2nh1R063WC6jD4StoKL5UWQU2WwunEYpsm1J4VGZim9nE9cDkW51iUEWF4SHVE8QM4DRuRFlg3b5/MrTIGvHSV1UYJ9AyBvQgg+7bwN0dDzFMJUAT6h08UCmrTFv4GXcevpHyVLrY6S0K6DVBXDKWPCW076FhSCcNTY31DpUWermO6br65hNRGu2uVnrjfdyfLHXTmvRWA=` ;
         
-        var app = new Vue({
+        var myapp = new Vue({
             el: '#app',
             data: {
                 sharing: '',
@@ -458,7 +459,7 @@
                         center: true,
                         confirmButtonText: '确定',
                         cancelButtonText: '取消',
-                        inputPattern: /\d{4}/,
+                        inputPattern: /^\d{4}$/,
                         inputErrorMessage: '密钥格式不正确'
                     }).then(({ value }) => {
                         var t = b64_md5(hex_md5(String(value)))
@@ -507,9 +508,23 @@
 </script>
 
 <script>
-    setTimeout(() => {
-        globalShow();
-    }, 350)
+    var flag = true;
+    var i = 0;
+    var t =  setInterval(() => {
+        try {
+            console.log('', ++i)
+            globalShow();
+            flag = true;
+        } catch (error) {
+            console.log('err..', flag, error)
+            flag = false;
+        } finally {
+            if (flag) {
+                window.clearInterval(t)
+            } 
+        }
+    }, 100)
+
 </script>
 
 
