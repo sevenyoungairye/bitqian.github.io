@@ -427,6 +427,7 @@
 </div>
 
 <script>
+    loadJs('/js/vue.js', null);
 
     function cssOnload(url){
         var head=document.getElementsByTagName("head");
@@ -460,7 +461,6 @@
     };
 
     loadJs('/js/md5.js', null)
-    loadJs('/js/vue.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js', null);
     loadJs('/js/webpack/vue-encrypt.js', null);
@@ -691,7 +691,7 @@
 <script type="text/javascript" src="/js/zoom.min.js"></script>
 <script type="text/javascript" src="/js/sakura-app.js"></script>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src='//unpkg.com/valine@v1.4.14/dist/Valine.min.js'></script>
 <!-- <script src="/js/botui.js"></script> -->
 <!-- 不蒜子 网页计数器 -->
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
