@@ -427,7 +427,6 @@
 </div>
 
 <script>
-    loadJs('/js/vue.js', null);
 
     function cssOnload(url){
         var head=document.getElementsByTagName("head");
@@ -461,6 +460,7 @@
     };
 
     loadJs('/js/md5.js', null)
+    loadJs('/js/vue.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/element-ui@2.15.1/lib/index.js', null);
     loadJs('https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.min.js', null);
     loadJs('/js/webpack/vue-encrypt.js', null);
